@@ -37,20 +37,22 @@ def process(after, input):
 
 
 
-            if is_number(force) is True :
+            if is_number(force) is True:
                 order.append(name)
                 num = int(temp)
                 order.append(num)
         j = j + 1
-    i = i + 11
+    i = i + 1
 
-   # for i in order :
+    newList = user
+    # Left Of
+
         
 
 
 
 def is_number(a):
-    try :
+    try:
         number = float(a)
         return True
     except ValueError:
