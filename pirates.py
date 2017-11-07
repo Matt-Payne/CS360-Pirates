@@ -6,12 +6,14 @@ def process(after, input):
 
     # number of gems
     count = 0
-    for i in user:
-        for j in user[i]:
+    i = 0
+    j = 0
+    for index in user:
+        for inside in user[i]:
             if is_number(user[i][j]) is True :
-                    count++
-        j++
-    i++
+                    count = count + 1
+        j = j + 1
+    i = i + 1
     # counts the number of people that will be taking a gem
     numberOfPeopleTotal = count / 2
     # this is your location in the list of people
@@ -22,9 +24,11 @@ def process(after, input):
 
     # final array, will have gem, and price
     order = []
+    i = 0
+    j = 0
     # makes 2d array into 1 array
-    for i in user:
-        for j in user[i]:
+    for out in user:
+        for inner in user[i]:
             force = user[i][j]
             temp = str(user[i][j])
 
@@ -37,10 +41,10 @@ def process(after, input):
                 order.append(name)
                 num = int(temp)
                 order.append(num)
-        j++
-    i++
+        j = j + 1
+    i = i + 11
 
-    for i in order :
+   # for i in order :
         
 
 
