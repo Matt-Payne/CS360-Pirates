@@ -1,7 +1,8 @@
 def process(after, input):
-    user = [list(item) for item in input]
+    # user = [list(item) for item in input]
+    user = [['ruby', 6000, 5000], ['diamond', 5000, 4000]]
     # number of people after you
-    numberPeopleAfter = after * 2
+    numberPicksAfter = after * 2
     # [[ 'ruby', 6000, 5000], ['diamond', 5000, 4000]]
 
     # number of gems
@@ -9,11 +10,13 @@ def process(after, input):
     i = 0
     j = 0
     for index in user:
-        for inside in user[i]:
-            if is_number(user[i][j]) is True :
-                    count = count + 1
-        j = j + 1
-    i = i + 1
+        for inside in index:
+            if is_number(inside) is True:
+                count = count + 1
+            j = j + 1
+        i = i + 1
+
+    print(count)
     # counts the number of people that will be taking a gem
     numberOfPeopleTotal = count / 2
     # this is your location in the list of people
@@ -45,7 +48,9 @@ def process(after, input):
     i = i + 1
 
     newList = user
-    # Left Of
+
+
+    #print(order)
 
         
 
