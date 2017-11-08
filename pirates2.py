@@ -1,3 +1,4 @@
+from operator import itemgetter, attrgetter
 def is_number(a):
     try:
         number = float(a)
@@ -9,7 +10,7 @@ def is_number(a):
 after = 3
 
 print('given after value, how many people come after me :', after)
-user = [['ruby', 6000, 5000], ['diamond', 5000, 4000], ['saphire', 50, 10, 15, 75,90,100]]
+user = [['ruby', 6000, 5000], ['diamond', 5000, 4000], ['saphire', 50, 10, 15, 75,90,100], ['bitcoin', 7000, 5000, 75, 77]]
     # number of people after you
 numberPicksAfter = after * 2
     # [[ 'ruby', 6000, 5000], ['diamond', 5000, 4000]]
@@ -69,5 +70,79 @@ newList = user
 
 
 print('order : ',order)
+length = len(order)
+tempList = []
+finalList = []
+i = 0
+while (i < length):
+    temp = order[i]
+    temp2 = order[i + 1]
+    tempList.append(temp)
+    tempList.append(temp2)
+    __tuple = tuple(tempList)
+    finalList.append(__tuple)
+    tempList = []
+    i = i + 2
+print(finalList)
 
 
+
+
+
+user = (sorted(finalList, key=itemgetter(0)))
+print(user)
+
+tupleListInOrder = (sorted(user, key=itemgetter(1), reverse=True))
+
+print(tupleListInOrder)
+
+backToList = [list(item) for item in tupleListInOrder]
+print("         ")
+print("         ")
+print(backToList)
+
+if gemToTakeFirst - 1 >= 0:
+    firstPick = int(gemToTakeFirst -1)
+    print(firstPick)
+else:
+    firstPick = 0
+
+if gemToTakeSecond - 1 >= 0:
+    secondPick = int(gemToTakeSecond - 1)
+    print(secondPick)
+else:
+    secondPick= 0
+
+
+# element 3 not 4, already accounted for starting at 0 and not 1 etc user[3] instead of user[4]
+
+
+#list like ['bitcoin',5000]
+myPick1 = backToList[firstPick]
+print(myPick1)
+
+myPick2 = backToList[secondPick]
+print(myPick2)
+
+firstString = ""
+firstString = str(myPick1[0])
+firstString = firstString+':'
+firstString = firstString + str(myPick1[1])
+
+
+
+print('first string', firstString)
+
+
+secondString = ""
+secondString = str(myPick2[0])
+secondString = secondString+':'
+secondString = secondString + str(myPick2[1])
+
+
+
+print('second string', secondString)
+
+
+finalString = firstString + ' ' + secondString
+print('final string', finalString)

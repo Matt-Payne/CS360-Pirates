@@ -15,12 +15,12 @@ def is_number(a):
 
 
 
-# user = {('diamond', 100), ('diamond', 5000), ('ruby', 200), ('diamond', 1050), ('saphire', 30), ('saphire', 100), ('iron', 30), ('bitcoin',5000)}
+user = {('diamond', 100), ('diamond', 5000), ('ruby', 200), ('diamond', 1050), ('saphire', 30), ('saphire', 100), ('iron', 30), ('bitcoin',5000)}
 
-#user = (sorted(user, key=itemgetter(0)))
-#print(user)
+user = (sorted(user, key=itemgetter(0)))
+print(user)
 
-#print(sorted(user, key=itemgetter(1), reverse=True))
+print(sorted(user, key=itemgetter(1), reverse=True))
 
 
 user = [['ruby', 6000, 5000], ['diamond', 5000, 4000]]
