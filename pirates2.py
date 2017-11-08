@@ -7,10 +7,13 @@ def is_number(a):
         return False
 
     # user = [list(item) for item in input]
-after = 3
+after = 1
 
 print('given after value, how many people come after me :', after)
-user = [['ruby', 6000, 5000], ['diamond', 5000, 4000], ['saphire', 50, 10, 15, 75,90,100], ['bitcoin', 7000, 5000, 75, 77]]
+user = [
+                ( 'ruby',    6000, 5000 ),
+                ( 'diamond', 5000, 4000 ),
+        ]
     # number of people after you
 numberPicksAfter = after * 2
     # [[ 'ruby', 6000, 5000], ['diamond', 5000, 4000]]
