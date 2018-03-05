@@ -1,3 +1,5 @@
+# Python Product from Fall 2017
+
 # CS360-Pirates
 repo for my python project
 CHRISTOPHER	NEWPORT	UNIVERSITY
